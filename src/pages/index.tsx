@@ -18,7 +18,7 @@ function ProfileHeader() {
         Hello and Namaste!
       </Heading>
       <p className={styles.profileDescription}>
-      Hi, I'm Mahaprasad (snwzd), a Cloud Engineer passionate about Backend Systems, Linux, and Cloud-Native Tech. 
+      Hi, I'm Mahaprasad (melonlorrd), a Cloud Engineer passionate about Backend Systems, Linux, and Cloud-Native Tech. 
       I currently work at RTDS as a Cloud-DevOps Engineer, building infrastructure and improving developer platform. 
       In my free time, I enjoy sketching.
       </p>
@@ -28,12 +28,6 @@ function ProfileHeader() {
         </Link>
         <Link className="button button--secondary button--md" to="https://www.linkedin.com/in/mprasadme">
           LinkedIn
-        </Link>
-        <Link className="button button--secondary button--md" to="https://bsky.app/profile/snwzd.bsky.social">
-          BlueSky
-        </Link>
-        <Link className="button button--secondary button--md" to="https://twitter.com/sloflayer">
-          X/Twitter
         </Link>
       </div>
     </div>

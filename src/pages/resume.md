@@ -5,17 +5,16 @@ title: Resume
 # Mahaprasad Dehury
 
 📧 mprasadme@gmail.com  
-🌐 [github.com/snwzd](https://github.com/snwzd) • [linkedin.com/in/mprasadme](https://linkedin.com/in/mprasadme)
+🌐 [github.com/melonlorrd](https://github.com/melonlorrd) • [linkedin.com/in/mprasadme](https://linkedin.com/in/mprasadme)
 
 ---
 
 ## Skills
 
-- **Cloud**: OpenStack, AWS  
+- **Cloud**: OpenStack 
 - **Languages**: Go, Python, Bash, YAML  
 - **Database**: MongoDB, PostgreSQL, Redis 
-- **Message Broker**: NATS, ZeroMQ  
-- **Tools**: Kubernetes, IaC, Nginx, Envoy, Jenkins, GitLab, ArgoCD, Prometheus, Grafana, ELK, Linux  
+- **Tools**: Kubernetes, IaC, Nginx, Envoy, Jenkins, ArgoCD, Prometheus, Grafana, ELK, Linux  
 - **Social Skills**: Collaborative team member, engaged in team-building activities
 
 ---
