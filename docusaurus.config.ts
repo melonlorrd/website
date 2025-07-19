@@ -52,7 +52,7 @@ const config: Config = {
 
   themeConfig: {
     navbar: {
-      title: 'SNWZD',
+      title: 'MNLRD',
       items: [
         {to: '/blog', label: 'BLOG', position: 'left'},
         {to: '/resume', label: 'RESUME', position: 'left'},
