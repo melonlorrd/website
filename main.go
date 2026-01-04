@@ -138,6 +138,7 @@ func mustCreate(path string) *os.File {
 func syncAttachments(outDir string) error {
 	return filepath.WalkDir(".", func(path string, d fs.DirEntry, err error) error {
 		if err != nil || d.IsDir() || !isImage(path) {
+			must(err)
 			return err
 		}
 
@@ -151,17 +152,23 @@ func syncAttachments(outDir string) error {
 
 		src, err := os.Open(path)
 		if err != nil {
+			must(err)
 			return err
 		}
 		defer src.Close()
 
 		dstFile, err := os.Create(dst)
 		if err != nil {
+			must(err)
 			return err
 		}
 		defer dstFile.Close()
 
 		_, err = io.Copy(dstFile, src)
+		if err != nil {
+			must(err)
+		}
+
 		return err
 	})
 }
