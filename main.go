@@ -2,7 +2,6 @@ package main
 
 import (
 	"bytes"
-	"fmt"
 	"html/template"
 	"io"
 	"io/fs"
@@ -35,10 +34,7 @@ func main() {
 
 	must(os.RemoveAll(buildDir))
 	must(os.MkdirAll(buildDir, 0755))
-
-	if err := syncAttachments(buildDir); err != nil {
-		fmt.Println(err.Error())
-	}
+	must(syncAttachments(buildDir))
 
 	blogs := loadBlogs()
 
@@ -138,7 +134,6 @@ func mustCreate(path string) *os.File {
 func syncAttachments(outDir string) error {
 	return filepath.WalkDir(".", func(path string, d fs.DirEntry, err error) error {
 		if err != nil || d.IsDir() || !isImage(path) {
-			must(err)
 			return err
 		}
 
@@ -152,23 +147,17 @@ func syncAttachments(outDir string) error {
 
 		src, err := os.Open(path)
 		if err != nil {
-			must(err)
 			return err
 		}
 		defer src.Close()
 
 		dstFile, err := os.Create(dst)
 		if err != nil {
-			must(err)
 			return err
 		}
 		defer dstFile.Close()
 
 		_, err = io.Copy(dstFile, src)
-		if err != nil {
-			must(err)
-		}
-
 		return err
 	})
 }
