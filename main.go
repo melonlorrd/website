@@ -50,7 +50,7 @@ func loadBlogs() []Blog {
 		goldmark.WithExtensions(
 			extension.GFM,
 			highlighting.NewHighlighting(
-				highlighting.WithStyle("catppuccin-mocha"),
+				highlighting.WithStyle("native"),
 				highlighting.WithGuessLanguage(true),
 				highlighting.WithFormatOptions(
 					html.WithLineNumbers(true),

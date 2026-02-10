@@ -7,4 +7,4 @@ clean:
 serve:
 	@rm -rf build/
 	@go run main.go
-	@python -m http.server -d build
+	@python3 -m http.server -d build
