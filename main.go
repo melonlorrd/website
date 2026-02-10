@@ -50,7 +50,7 @@ func loadBlogs() []Blog {
 		goldmark.WithExtensions(
 			extension.GFM,
 			highlighting.NewHighlighting(
-				highlighting.WithStyle("average"),
+				highlighting.WithStyle("xcode-dark"),
 				highlighting.WithGuessLanguage(true),
 				highlighting.WithFormatOptions(
 					html.WithLineNumbers(true),
